@@ -144,7 +144,7 @@ Hit ENTER to save the file
 
 - See Output of the above commands below
 
-![Series](./Images/0.png)
+![Series](./Images/Series.png)
 
 
 - Index.html file was created in the /var/www/projectlamp location to test if the virtual host works fine with the command below
