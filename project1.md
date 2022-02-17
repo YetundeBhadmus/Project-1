@@ -62,6 +62,7 @@ STEP 2 — INSTALLING MYSQL
 
 `sudo mysql`
 
+
 ![Mysql Securelogin console](./Images/Mysql-login.png)
 
 
@@ -140,12 +141,11 @@ Hit ENTER to save the file
 
 - Apache Reloaded with the command below
 
-`sudo systemctl reload apache2`
+to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive:
 
 - See Output of the above commands below
 
 ![Series](./Images/Series.png)
-
 
 - Index.html file was created in the /var/www/projectlamp location to test if the virtual host works fine with the command below
 
@@ -154,6 +154,43 @@ Hit ENTER to save the file
 - Output Below
 
 ![Index](./Images/Hello-lamp.png)
+
+STEP 5 — ENABLE PHP ON THE WEBSITE
+
+- To edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive, the command below was use used
+
+
+`sudo vim /etc/apache2/mods-enabled/dir.conf`
+  
+- The command as showm in the screenshot was used
+
+![Change order](./Images/1.png)
+
+- After saving and closing the file, Apache was reloaded so the changes could take effect, the command below was used
+
+`sudo systemctl reload apache2`
+
+![Reload](./Images/apche.png)
+
+- Create a new file named index.php inside your custom web root folder
+
+`vim /var/www/projectlamp/index.php`
+
+- The php code as shown in the screenshot was added to the newly created file
+
+![php](./Images/php-script.png)
+
+- Below was the output on the web browser after it was refreshed
+
+![php index](./Images/Index.php.png)
+
+
+
+
+
+
+
+
 
 
 
